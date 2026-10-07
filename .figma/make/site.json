@@ -1,0 +1,10 @@
+{
+  "description": "Monitor air quality in the Suape Industrial Port Complex with real-time data on pollutants, alerts, and historical trends for informed decision-making.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

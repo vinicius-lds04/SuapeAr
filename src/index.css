@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Public+Sans:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque", "Public Sans", ui-sans-serif, sans-serif;
+
+  --color-petrol-50: #eef6f7;
+  --color-petrol-100: #d5e8eb;
+  --color-petrol-200: #aed2d8;
+  --color-petrol-300: #7fb5be;
+  --color-petrol-400: #4b929f;
+  --color-petrol-500: #2d7786;
+  --color-petrol-600: #1f6070;
+  --color-petrol-700: #184d5a;
+  --color-petrol-800: #143f49;
+  --color-petrol-900: #0f323a;
+
+  --color-canvas: #f2f6f7;
+  --color-ink: #10272d;
+  --color-ink-2: #4a6168;
+  --color-ink-3: #6b8087;
+  --color-line: #dbe5e7;
+
+  --color-ok: #1e8a4c;
+  --color-ok-soft: #e4f5ec;
+  --color-ok-ink: #11683a;
+  --color-warn: #e3a008;
+  --color-warn-soft: #fcf2d2;
+  --color-warn-ink: #7f5600;
+  --color-danger: #d23a2f;
+  --color-danger-soft: #fdeae8;
+  --color-danger-ink: #a0231a;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes livepulse {
+  0% { box-shadow: 0 0 0 0 rgb(30 138 76 / 0.5); }
+  100% { box-shadow: 0 0 0 8px rgb(30 138 76 / 0); }
+}
+.live-dot { animation: livepulse 1.6s ease-out infinite; }
+
+@keyframes flashin {
+  from { background-color: rgb(45 119 134 / 0.14); }
+  to { background-color: transparent; }
+}
+.flash { animation: flashin 1.2s ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .live-dot, .flash { animation: none; }
+}
